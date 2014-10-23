@@ -1,16 +1,25 @@
-
 <!DOCTYPE HTML>
-  <head>
-    <title>1 praktikum | esileht</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-	
-  </head>
-  
-  <body>
-   <h2>See on algus</h2>
-   <a href="2ndpage.php">a see on link mis peaks meid edasi viima</a>
-  <?php echo ($_GET);
-  ?>
-   </body>
+<html>
+<head>
+  <title>II periood I praktikum</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+  <h1>Esimene leht</h1>
+    <?php
+      $link_file = "second_page.php";
+      $age = 25;
+	  $name = 'kristi';
+    ?>
+   
+   <a href="<?php echo "{$link_file}?age={$age}"; ?>">Teisele lehele</a><br>
+    <?php 
+      print_r($_GET); echo "<br>";
+      echo $_GET["name"];
+      $jada = array("kristi", "25"); echo "<br>";
+    ?>
+</a>
+</body>
 </html>
